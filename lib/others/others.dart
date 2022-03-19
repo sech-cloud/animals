@@ -2,27 +2,34 @@
 
 import 'package:animals/Inicio.dart';
 
+const List OverList = [
+  "OverView",
+  "Songs",
+  "Other",
+  "New",
+  "Discover",
+  "Concert",
+];
 const List song_type_1 = [
   "Musica",
   "Salsa",
   "Pop",
-  "Latino",
+  "Latin",
   "Reggae",
   "Other",
 ];
 const List song_type_2 = [
   "Podcasts",
-  "Made For You",
-  "Charts",
-  "Nuevo",
+  "Playing",
+  "New",
   "Discover",
-  "En vivo",
+  "Concert",
 ];
 const List songs = [
   {
     "img": "../assets/images/1.png",
-    "title": "Feelin' Good",
-    "description": "Feel good with this positively timeless playlist!",
+    "title": "Salsa",
+    "description": "Feel good Listening playlist!",
     "song_count": "100 songs",
     "date": "about 19 hr",
     //"song_url": "songs/1.mp3",
@@ -38,8 +45,8 @@ const List songs = [
   },
   {
     "img": "../assets/images/2.jpg",
-    "title": "Peaceful Piano",
-    "description": "Relax and indulge with beautiful piano pieces",
+    "title": "Pop",
+    "description": "Relax songs",
     "song_count": "324 songs",
     "date": "about 14 hr",
     "song_url": "songs/2.mp3",
@@ -55,8 +62,8 @@ const List songs = [
   },
   {
     "img": "../assets/images/3.jpg",
-    "title": "Deep Focus",
-    "description": "Keep calm and focus with ambient and post-rock music.",
+    "title": "Deep",
+    "description": "Keep calm",
     "song_count": "195 songs",
     "date": "about 10 hr",
     //"song_url": "songs/1.mp3",
@@ -73,7 +80,7 @@ const List songs = [
   {
     "img": "../assets/images/4.jpg",
     "title": "Lo-Fi Beats",
-    "description": "Beats to relax, study and focus.",
+    "description": "study and focus.",
     "song_count": "599 songs",
     "date": "about 21 hr",
     //"song_url": "songs/2.mp3",
@@ -90,7 +97,7 @@ const List songs = [
   {
     "img": "../assets/images/5.jpg",
     "title": "Chill Lofi Study Beats",
-    "description": "The perfect study beats, twenty four seven.",
+    "description": "The perfect study beats",
     "song_count": "317 songs",
     "date": "about 11 hr",
     //"song_url": "songs/1.mp3",
@@ -106,8 +113,8 @@ const List songs = [
   },
   {
     "img": "../assets/images/6.jpg",
-    "title": "Chill Hits",
-    "description": "Kick back to the best new and recent chill tunes.",
+    "title": "Podcasts",
+    "description": "Chill tunes.",
     "song_count": "130 songs",
     "date": "about 7 hr",
     //"song_url": "songs/2.mp3",

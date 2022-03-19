@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, unnecessary_new
 
 import 'dart:io';
 import 'package:audioplayers/audioplayers.dart';
@@ -33,7 +33,6 @@ class _DetalleState extends State<Detalle> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     initPlayer();
   }
@@ -62,7 +61,6 @@ class _DetalleState extends State<Detalle> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     stopSound(widget.songUrl);
   }
@@ -114,9 +112,10 @@ class _DetalleState extends State<Detalle> {
                   width: size.width - 60,
                   height: size.width - 60,
                   decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(widget.img), fit: BoxFit.cover),
-                      borderRadius: BorderRadius.circular(20)),
+                    borderRadius: BorderRadius.circular(20),
+                    image: DecorationImage(
+                        image: AssetImage(widget.img), fit: BoxFit.cover),
+                  ),
                 ),
               )
             ],

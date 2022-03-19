@@ -25,7 +25,7 @@ class _PaginaInicioState extends State<PaginaInicio> {
         title: mostrarAppBar(),
         backgroundColor: Colors.white,
       ),
-      body: bodyAppSpf(),
+      body: bodyApp(),
       //: mostrarAppBar(),
     );
   }
@@ -56,7 +56,7 @@ class _PaginaInicioState extends State<PaginaInicio> {
     );
   }
 
-  Widget bodyAppSpf() {
+  Widget bodyApp() {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,6 +64,52 @@ class _PaginaInicioState extends State<PaginaInicio> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 30, top: 20),
+                  child: Row(
+                      children: List.generate(songs.length - 5, (index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 30),
+                      child: GestureDetector(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              OverList[index],
+                              style: TextStyle(
+                                  //color: Colors.grey,s
+                                  fontSize: 15,
+                                  color: Colors.grey,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            SizedBox(
+                              height: 3,
+                            ),
+                            Container(
+                              width: 10,
+                              height: 3,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5)),
+                            ),
+                            Container(
+                              width: 360,
+                              height: 180,
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(songs[index]['img']),
+                                      fit: BoxFit.cover),
+                                  color: Colors.grey,
+                                  borderRadius: BorderRadius.circular(10)),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  })),
+                ),
+              ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 //crossAxisAlignment: CrossAxisAlignment.start,
@@ -134,9 +180,6 @@ class _PaginaInicioState extends State<PaginaInicio> {
                                 song: songs[index],
                               ),
                               type: PageTransitionType.scale));
-                      /*AlbumPagina;*/
-                      //Navigator.push(context, MaterialPageRoute(context)=>AlbumPagina());
-                      // Navigator.push(context, PageTransition(child:))
                     },
                     child: Column(
                       children: [
@@ -237,9 +280,6 @@ class _PaginaInicioState extends State<PaginaInicio> {
           SizedBox(
             height: 20,
           ),
-
-//segundo bloque
-
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Padding(
